@@ -1,12 +1,13 @@
 """
 Proyecto: AuraFit
 Curso: Lenguajes de Programación
-Autor: Sebastian Chambi Mamani
+
 
 Descripción:
 Este archivo define el modelo Cliente, que almacena la información
 personal de los clientes registrados en el gimnasio.
 """
+# Prueba de Git - AuraFit
 
 from django.db import models
 
