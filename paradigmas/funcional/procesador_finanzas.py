@@ -1,13 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autores: Fernando Jose Concha Jimenez / Sebastian Chambi Mamani
-
-Descripción:
-Módulo Funcional Multiparadigma para la transformación de 'Membresias' y 'Pagos'.
-Integra POO (Clases Abstractas), Funciones de Orden Superior (map, filter, reduce)
-y lambdas para el procesamiento inmutable del flujo de caja.
-"""
 from abc import ABC, abstractmethod
 from functools import reduce
 

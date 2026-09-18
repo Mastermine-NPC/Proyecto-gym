@@ -1,14 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autores: Fernando Jose Concha Jimenez / Sebastian Chambi Mamani
-
-Descripción:
-Módulo Lógico puro para la evaluación de entidades 'Membresia' y 'Pago'.
-Aplica Structural Pattern Matching (match-case) con guardas (if) para 
-evaluaciones financieras.
-"""
-
 # 1. PROGRAMACIÓN LÓGICA (Reglas de Negocio con match-case)
 
 def es_pago_efectivo(pago):

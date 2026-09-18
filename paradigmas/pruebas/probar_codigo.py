@@ -1,14 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autores: Fernando Jose Concha Jimenez / Sebastian Chambi Mamani
-
-Descripción:
-Panel de Control Interactivo.
-Demuestra el uso de estructuras iterativas y condicionales para
-navegar por los diferentes módulos multiparadigma del sistema.
-"""
-
 import os
 import django
 import json

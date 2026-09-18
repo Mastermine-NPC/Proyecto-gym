@@ -1,13 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autor: Fernando Jose Concha Jimenez
-
-Descripción:
-Este archivo define el modelo Entrenador, que almacena la información
-personal y laboral de los entrenadores del gimnasio.
-"""
-
 from django.db import models
 
 

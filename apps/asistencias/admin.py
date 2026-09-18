@@ -1,13 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autor: Fernando Jose Concha Jimenez
-
-Descripción:
-Configuración del panel de administración
-del módulo de asistencias.
-"""
-
 from django.contrib import admin
 
 from .models import Asistencia

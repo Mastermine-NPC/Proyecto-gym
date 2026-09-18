@@ -1,12 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autor: Sebastian Chambi Mamani
-
-Descripción:
-Registro del modelo Entrenador en el panel de administración de Django.
-"""
-
 from django.contrib import admin
 from .models import Entrenador
 

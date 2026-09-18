@@ -1,14 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autor: Sebastian Chambi Mamani
-
-Descripción:
-Modelos correspondientes al módulo de asistencias.
-Permite registrar el ingreso y salida de los clientes
-al gimnasio.
-"""
-
 from django.db import models
 from apps.clientes.models import Cliente
 

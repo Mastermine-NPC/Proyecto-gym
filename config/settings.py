@@ -1,17 +1,3 @@
-"""
-Proyecto : AuraFit
-Curso    : Lenguajes de Programación
-Autor    : Fernando Jose Concha Jimenez
-
-Archivo:
-settings.py
-
-Descripción:
-Contiene la configuración principal del proyecto Django.
-Aquí se registran las aplicaciones del proyecto y las
-configuraciones generales del sistema.
-"""
-
 from pathlib import Path
 
 # Ruta principal del proyecto

@@ -1,12 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autor: Fernando Jose Concha Jimenez
-
-Descripción:
-Registro del modelo Cliente en el panel de administración de Django.
-"""
-
 from django.contrib import admin
 from .models import Cliente
 

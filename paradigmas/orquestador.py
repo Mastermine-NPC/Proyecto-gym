@@ -1,13 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autores: Fernando Jose Concha Jimenez / Sebastian Chambi Mamani
-
-Descripción:
-Orquestador Principal del Sistema (Patrón Facade).
-Unifica los tres dominios de negocio: Personas, Operaciones y Finanzas.
-"""
-
 from paradigmas.funcional.procesador_personas import ProcesadorPersonas
 from paradigmas.funcional.procesador_operaciones import ProcesadorOperaciones
 from paradigmas.funcional.procesador_finanzas import ProcesadorFinanzas

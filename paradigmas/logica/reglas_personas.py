@@ -1,13 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autores: Fernando Jose Concha Jimenez / Sebastian Chambi Mamani
-
-Descripción:
-Módulo Lógico puro para la evaluación de entidades 'Cliente' y 'Entrenador'.
-Aplica Structural Pattern Matching (match-case) para validación de estados
-"""
-
 # 1. PROGRAMACIÓN LÓGICA (Reglas de Negocio con match-case)
 
 def es_cliente_apto(cliente):

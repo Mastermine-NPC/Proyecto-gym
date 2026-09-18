@@ -1,14 +1,3 @@
-"""
-Proyecto: AuraFit
-Curso: Lenguajes de Programación
-Autores: Fernando Jose Concha Jimenez / Sebastian Chambi Mamani
-
-Descripción:
-Módulo Lógico puro para la evaluación de entidades 'Asistencia' y 'EvaluacionFisica'.
-Aplica Structural Pattern Matching (match-case) para validación de estados y 
-clasificación.
-"""
-
 # 1. PROGRAMACIÓN LÓGICA (Reglas de Negocio con match-case)
 
 def es_asistencia_efectiva(asistencia):
