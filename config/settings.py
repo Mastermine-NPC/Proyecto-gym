@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # Ruta principal del proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -7,13 +8,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # CONFIGURACIÓN GENERAL
 
 # Clave secreta utilizada por Django
-SECRET_KEY = 'django-insecure-gaoej96w$!-h=k*9#o6mo)q916i13cb$%fe21ia$yt0j1r#8m='
+SECRET_KEY = os.getenv(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-gaoej96w$!-h=k*9#o6mo)q916i13cb$%fe21ia$yt0j1r#8m='
+)
 
-# Durante el desarrollo permanece en True
-DEBUG = True
+# Durante el desarrollo permanece en True (configurable vía DJANGO_DEBUG)
+DEBUG = os.getenv('DJANGO_DEBUG', 'True').lower() in ('true', '1', 't')
 
-# Equipos autorizados para acceder al proyecto
-ALLOWED_HOSTS = []
+# Equipos autorizados para acceder al proyecto (permitir localhost y 127.0.0.1 para pruebas Locust)
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',')
+    if host.strip()
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv('DJANGO_CSRF_TRUSTED_ORIGINS', '').split(',')
+    if origin.strip()
+]
 
 
 # APLICACIONES INSTALADAS
@@ -83,17 +97,34 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 # BASE DE DATOS
+# Por defecto usa PostgreSQL (bd_aurafit). Si no tienes PostgreSQL iniciado o deseas probar de inmediato,
+# puedes activar SQLite definiendo la variable de entorno USE_SQLITE=True.
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bd_aurafit',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '5432',
+USE_SQLITE = os.getenv('USE_SQLITE', 'False').lower() in ('true', '1', 't')
+
+if USE_SQLITE:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+            'CONN_MAX_AGE': 60,
+            'OPTIONS': {
+                'timeout': 60,  # Tiempo de espera extendido para evitar bloqueos bajo concurrencia
+            },
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('DB_NAME', 'bd_aurafit'),
+            'USER': os.getenv('DB_USER', 'postgres'),
+            'PASSWORD': os.getenv('DB_PASSWORD', '123456'),
+            'HOST': os.getenv('DB_HOST', 'localhost'),
+            'PORT': os.getenv('DB_PORT', '5432'),
+            'CONN_MAX_AGE': 60,
+        }
+    }
 
 
 # VALIDADORES DE CONTRASEÑA
@@ -126,6 +157,21 @@ USE_TZ = True
 # ARCHIVOS ESTÁTICOS
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+try:
+    import whitenoise  # noqa: F401
+    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
+    }
+except ImportError:
+    pass
 
 # CLAVE PRIMARIA POR DEFECTO
 
