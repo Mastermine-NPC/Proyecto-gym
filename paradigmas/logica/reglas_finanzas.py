@@ -32,12 +32,18 @@ def categorizar_ingreso(pago):
         case _:
             return "NO_CONTABILIZADO"
 
-#R
+# 2. RECURSIVIDAD
+
+import sys
 
 def contar_pagos_completados_recursivo(lista_pagos, indice=0):
     """
-    Calcula la cantidad total de pagos exitosos llamándose a sí misma.
+    Calcula la cantidad total de pagos exitosos llamándose a sí misma,
+    soportando colecciones de 1,000+ registros.
     """
+    if indice == 0 and len(lista_pagos) + 500 > sys.getrecursionlimit():
+        sys.setrecursionlimit(len(lista_pagos) + 500)
+
     # Caso Base: Fin de la iteración
     if indice == len(lista_pagos):
         return 0

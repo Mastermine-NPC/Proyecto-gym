@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.db import transaction, IntegrityError
+from django.core.exceptions import ValidationError
 from .models import Cliente, Sexo, Estado
 from apps.membresias.models import Membresia, TipoMembresia, EstadoMembresia
 
@@ -22,16 +23,16 @@ def inscribir_cliente(request):
         else:
             data = request.POST.dict()
 
-        # Validación de campos obligatorios
-        nombres = data.get("nombres", "").strip()
-        apellido_paterno = data.get("apellido_paterno", "").strip()
-        apellido_materno = data.get("apellido_materno", "").strip()
-        dni = data.get("dni", "").strip()
-        telefono = data.get("telefono", "").strip()
-        correo = data.get("correo", "").strip()
-        fecha_nacimiento = data.get("fecha_nacimiento", "1998-01-01").strip()
-        sexo = data.get("sexo", Sexo.MASCULINO).upper().strip()
-        direccion = data.get("direccion", "Av. Principal 123").strip()
+        # Validación de campos obligatorios (a prueba de valores null/None en JSON)
+        nombres = str(data.get("nombres") or "").strip()
+        apellido_paterno = str(data.get("apellido_paterno") or "").strip()
+        apellido_materno = str(data.get("apellido_materno") or "").strip()
+        dni = str(data.get("dni") or "").strip()
+        telefono = str(data.get("telefono") or "").strip()
+        correo = str(data.get("correo") or "").strip()
+        fecha_nacimiento = str(data.get("fecha_nacimiento") or "1998-01-01").strip()
+        sexo = str(data.get("sexo") or Sexo.MASCULINO).upper().strip()
+        direccion = str(data.get("direccion") or "Av. Principal 123").strip()
 
         if not nombres or not apellido_paterno or not dni or not correo:
             return JsonResponse(
@@ -67,7 +68,12 @@ def inscribir_cliente(request):
             )
 
             # Opcional: si se especifica membresía o por defecto para inscripción completa
-            incluir_membresia = data.get("incluir_membresia", False)
+            raw_membresia = data.get("incluir_membresia", False)
+            if isinstance(raw_membresia, str):
+                incluir_membresia = raw_membresia.strip().lower() in ("true", "1", "t", "yes", "si", "sí")
+            else:
+                incluir_membresia = bool(raw_membresia)
+
             membresia_id = None
             if incluir_membresia:
                 # Buscar o crear tipo de membresía base para la prueba de concurrencia
@@ -104,6 +110,14 @@ def inscribir_cliente(request):
             status=201,
         )
 
+    except ValidationError as e:
+        return JsonResponse(
+            {
+                "error": "Datos de entrada con formato inválido",
+                "detalle": e.messages if hasattr(e, "messages") else str(e),
+            },
+            status=400,
+        )
     except IntegrityError as e:
         # Error de unicidad en BD (DNI o Correo ya existente)
         return JsonResponse(
@@ -143,7 +157,18 @@ def api_orden_inscripciones(request):
     en la base de datos (concurrencia serializada por clave primaria y timestamp con milisegundos).
     Soporta orden ascendente (1 a N) o descendente (N a 1).
     """
-    limite = int(request.GET.get("limite", 1000))
+    try:
+        limite = int(request.GET.get("limite", 1000))
+        if limite <= 0:
+            return JsonResponse(
+                {"error": "El parámetro 'limite' debe ser un entero positivo."},
+                status=400,
+            )
+    except (ValueError, TypeError):
+        return JsonResponse(
+            {"error": "El parámetro 'limite' debe ser un número entero válido."},
+            status=400,
+        )
     direccion_orden = request.GET.get("orden", "asc").lower()
 
     clientes_qs = Cliente.objects.all().order_by("id")

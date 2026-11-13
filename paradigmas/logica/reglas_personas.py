@@ -35,12 +35,18 @@ def categorizar_entrenador(entrenador):
             return "ESTADO_DESCONOCIDO"
 
 
-# 2. R
+# 2. RECURSIVIDAD
+
+import sys
 
 def contar_clientes_activos_recursivo(lista_clientes, indice=0):
     """
-    Calcula la cantidad total de clientes activos 
+    Calcula la cantidad total de clientes activos de forma recursiva,
+    ajustando dinámicamente el límite de pila para colecciones de 1,000+ registros.
     """
+    if indice == 0 and len(lista_clientes) + 500 > sys.getrecursionlimit():
+        sys.setrecursionlimit(len(lista_clientes) + 500)
+
     # Caso Base: Fin de la lista (condición de parada de la recursión)
     if indice == len(lista_clientes):
         return 0

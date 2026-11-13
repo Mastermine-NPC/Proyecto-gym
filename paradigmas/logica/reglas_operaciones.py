@@ -30,12 +30,18 @@ def evaluar_imc_y_grasa(evaluacion):
         case _:
             return "ESTADO_DESCONOCIDO"
 
-# 2. R
+# 2. RECURSIVIDAD
+
+import sys
 
 def contar_asistencias_efectivas_recursivo(lista_asistencias, indice=0):
     """
-    Calcula la cantidad total de asistencias válidas llamándose a sí misma.
+    Calcula la cantidad total de asistencias válidas llamándose a sí misma,
+    soportando colecciones de 1,000+ registros.
     """
+    if indice == 0 and len(lista_asistencias) + 500 > sys.getrecursionlimit():
+        sys.setrecursionlimit(len(lista_asistencias) + 500)
+
     # Caso Base
     if indice == len(lista_asistencias):
         return 0

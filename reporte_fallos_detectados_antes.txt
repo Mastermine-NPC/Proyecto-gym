@@ -1,0 +1,2440 @@
+Command exited with code 1.
+
+Command output:
+Creating test database for alias 'default'...
+........................................................................................................................................................................................................................................................................................................................................................................FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF......................................................................EEEEEEEEEEEEEEE.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_04_estadisticas_y_orden_021 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_021)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_022 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_022)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_023 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_023)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_024 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_024)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_025 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_025)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_026 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_026)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_027 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_027)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_028 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_028)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_029 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_029)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_030 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_030)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_031 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_031)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_032 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_032)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_033 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_033)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_034 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_034)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 146, in api_orden_inscripciones
+    limite = int(request.GET.get("limite", 1000))
+ValueError: invalid literal for int() with base 10: 'abc'
+
+======================================================================
+ERROR: test_04_estadisticas_y_orden_035 (apps.clientes.tests.ClientesMasivoAPITestCase.test_04_estadisticas_y_orden_035)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 260, in _test
+    res = self.client.get(f"{self.url_orden}?limite={bad_limit}")
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1128, in get
+    response = super().get(
+        path,
+    ...<4 lines>...
+        **extra,
+    )
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 475, in get
+    return self.generic(
+           ~~~~~~~~~~~~^
+        "GET",
+        ^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 671, in generic
+    return self.request(**r)
+           ~~~~~~~~~~~~^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 1091, in request
+    self.check_exception(response)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\test\client.py", line 805, in check_exception
+    raise exc_value
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\views\decorators\http.py", line 63, in inner
+    return func(request, *args, **kwargs)
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\views.py", line 174, in api_orden_inscripciones
+    subconjunto = list(clientes_qs[:limite])
+                       ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\.venv\Lib\site-packages\django\db\models\query.py", line 504, in __getitem__
+    raise ValueError("Negative indexing is not supported.")
+ValueError: Negative indexing is not supported.
+
+======================================================================
+ERROR: test_05_recursividad_escala_099_990_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_099_990_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_100_1000_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_100_1000_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_101_1010_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_101_1010_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_102_1020_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_102_1020_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_103_1030_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_103_1030_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_104_1040_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_104_1040_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_105_1050_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_105_1050_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_106_1060_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_106_1060_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_107_1070_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_107_1070_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_108_1080_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_108_1080_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_109_1090_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_109_1090_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_110_1100_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_110_1100_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_111_1110_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_111_1110_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_112_1120_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_112_1120_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_113_1130_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_113_1130_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_114_1140_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_114_1140_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_115_1150_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_115_1150_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_116_1160_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_116_1160_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_117_1170_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_117_1170_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_118_1180_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_118_1180_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_119_1190_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_119_1190_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_120_1200_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_120_1200_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_121_1210_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_121_1210_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_122_1220_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_122_1220_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_123_1230_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_123_1230_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_124_1240_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_124_1240_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_125_1250_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_125_1250_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_126_1260_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_126_1260_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_127_1270_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_127_1270_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_128_1280_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_128_1280_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_129_1290_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_129_1290_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_130_1300_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_130_1300_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_131_1310_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_131_1310_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_132_1320_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_132_1320_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_133_1330_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_133_1330_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_134_1340_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_134_1340_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_135_1350_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_135_1350_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_136_1360_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_136_1360_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_137_1370_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_137_1370_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_138_1380_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_138_1380_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_139_1390_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_139_1390_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_140_1400_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_140_1400_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_141_1410_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_141_1410_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_142_1420_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_142_1420_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_143_1430_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_143_1430_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_144_1440_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_144_1440_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_145_1450_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_145_1450_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_146_1460_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_146_1460_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_147_1470_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_147_1470_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_148_1480_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_148_1480_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_149_1490_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_149_1490_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+ERROR: test_05_recursividad_escala_150_1500_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_150_1500_registros)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\pruebas\test_paradigmas.py", line 261, in _test
+    self.assertEqual(contar_clientes_activos_recursivo(clientes), esperados_cli)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 51, in contar_clientes_activos_recursivo
+    return es_activo + contar_clientes_activos_recursivo(lista_clientes, indice + 1)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 977 more times]
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\paradigmas\logica\reglas_personas.py", line 49, in contar_clientes_activos_recursivo
+    es_activo = 1 if es_cliente_apto(lista_clientes[indice]) else 0
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
+
+======================================================================
+FAIL: test_02_entrada_borde_061_json_valor_none_apellido_paterno_01 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_061_json_valor_none_apellido_paterno_01)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_apellido_paterno_01': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_062_json_valor_none_dni_02 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_062_json_valor_none_dni_02)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_dni_02': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_063_json_valor_none_correo_03 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_063_json_valor_none_correo_03)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_correo_03': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_064_json_valor_none_sexo_04 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_064_json_valor_none_sexo_04)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 201 : Fallo en caso 'json_valor_none_sexo_04': se esperaba HTTP 201 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'upper'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_065_json_valor_none_nombres_05 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_065_json_valor_none_nombres_05)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_nombres_05': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_066_json_valor_none_apellido_paterno_06 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_066_json_valor_none_apellido_paterno_06)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_apellido_paterno_06': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_067_json_valor_none_dni_07 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_067_json_valor_none_dni_07)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_dni_07': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_068_json_valor_none_correo_08 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_068_json_valor_none_correo_08)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_correo_08': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_069_json_valor_none_sexo_09 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_069_json_valor_none_sexo_09)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 201 : Fallo en caso 'json_valor_none_sexo_09': se esperaba HTTP 201 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'upper'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_070_json_valor_none_nombres_10 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_070_json_valor_none_nombres_10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_nombres_10': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_071_json_valor_none_apellido_paterno_11 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_071_json_valor_none_apellido_paterno_11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_apellido_paterno_11': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_072_json_valor_none_dni_12 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_072_json_valor_none_dni_12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_dni_12': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_073_json_valor_none_correo_13 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_073_json_valor_none_correo_13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_correo_13': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_074_json_valor_none_sexo_14 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_074_json_valor_none_sexo_14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 201 : Fallo en caso 'json_valor_none_sexo_14': se esperaba HTTP 201 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'upper'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_075_json_valor_none_nombres_15 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_075_json_valor_none_nombres_15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'json_valor_none_nombres_15': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "'NoneType' object has no attribute 'strip'"})
+
+======================================================================
+FAIL: test_02_entrada_borde_076_fecha_nacimiento_invalida_01 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_076_fecha_nacimiento_invalida_01)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_01': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-1\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_077_fecha_nacimiento_invalida_02 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_077_fecha_nacimiento_invalida_02)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_02': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-2\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_078_fecha_nacimiento_invalida_03 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_078_fecha_nacimiento_invalida_03)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_03': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-3\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_079_fecha_nacimiento_invalida_04 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_079_fecha_nacimiento_invalida_04)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_04': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-4\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_080_fecha_nacimiento_invalida_05 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_080_fecha_nacimiento_invalida_05)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_05': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-5\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_081_fecha_nacimiento_invalida_06 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_081_fecha_nacimiento_invalida_06)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_06': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-6\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_082_fecha_nacimiento_invalida_07 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_082_fecha_nacimiento_invalida_07)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_07': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-7\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_083_fecha_nacimiento_invalida_08 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_083_fecha_nacimiento_invalida_08)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_08': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-8\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_084_fecha_nacimiento_invalida_09 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_084_fecha_nacimiento_invalida_09)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_09': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-9\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_085_fecha_nacimiento_invalida_10 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_085_fecha_nacimiento_invalida_10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_10': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-10\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_086_fecha_nacimiento_invalida_11 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_086_fecha_nacimiento_invalida_11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_11': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-11\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_087_fecha_nacimiento_invalida_12 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_087_fecha_nacimiento_invalida_12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_12': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-12\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_088_fecha_nacimiento_invalida_13 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_088_fecha_nacimiento_invalida_13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_13': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-13\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_089_fecha_nacimiento_invalida_14 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_089_fecha_nacimiento_invalida_14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_14': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-14\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_090_fecha_nacimiento_invalida_15 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_090_fecha_nacimiento_invalida_15)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 142, in _test
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        response.status_code,
+        ^^^^^^^^^^^^^^^^^^^^^
+        expected_status,
+        ^^^^^^^^^^^^^^^^
+        f"Fallo en caso '{name}': se esperaba HTTP {expected_status} pero devolvió HTTP {response.status_code} ({response.content.decode('utf-8', errors='ignore')})",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 500 != 400 : Fallo en caso 'fecha_nacimiento_invalida_15': se esperaba HTTP 400 pero devolvió HTTP 500 ({"error": "Error interno del servidor", "detalle": "['\u201cfecha-invalida-15\u201d : el valor tiene un formato de fecha inv\u00e1lido. Deber\u00eda estar en el formato YYYY-MM-DD.']"})
+
+======================================================================
+FAIL: test_02_entrada_borde_091_formdata_false_01 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_091_formdata_false_01)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_092_formdata_false_02 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_092_formdata_false_02)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_093_formdata_false_03 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_093_formdata_false_03)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_094_formdata_false_04 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_094_formdata_false_04)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_095_formdata_false_05 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_095_formdata_false_05)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_096_formdata_false_06 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_096_formdata_false_06)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_097_formdata_false_07 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_097_formdata_false_07)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_098_formdata_false_08 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_098_formdata_false_08)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_099_formdata_false_09 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_099_formdata_false_09)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+======================================================================
+FAIL: test_02_entrada_borde_100_formdata_false_10 (apps.clientes.tests.ClientesMasivoAPITestCase.test_02_entrada_borde_100_formdata_false_10)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\edupa\Downloads\Proyecto-gym-main\Proyecto-gym-main\apps\clientes\tests.py", line 174, in _test
+    self.assertIsNone(
+    ~~~~~~~~~~~~~~~~~^
+        data["cliente"]["membresia_id"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+AssertionError: 1 is not None : Fallo: enviar incluir_membresia='false' en form-data creó una membresía por evaluar bool('false') == True
+
+----------------------------------------------------------------------
+Ran 1050 tests in 7.812s
+
+FAILED (failures=40, errors=67)
+Destroying test database for alias 'default'...
+Found 1050 test(s).
+System check identified no issues (0 silenced).
