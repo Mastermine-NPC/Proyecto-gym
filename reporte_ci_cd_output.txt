@@ -1,6 +1,6 @@
 ====================================================================== 
        AURAFIT GYM - REPORTE DE EJECUCION CI/CD Y PRUEBAS              
-       Fecha y Hora: vie 13/11/2026  7:50:39.09                                     
+       Fecha y Hora: vie 13/11/2026  7:54:24.59                                     
        Repositorio : https://github.com/Mastermine-NPC/Proyecto-gym    
 ====================================================================== 
  
@@ -15,7 +15,7 @@ No changes detected
 [3/3] EJECUCION DE PRUEBAS AUTOMATIZADAS (manage.py test --verbosity 2) 
 ---------------------------------------------------------------------- 
 Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
-Found 1050 test(s).
+Found 1055 test(s).
 Operations to perform:
   Synchronize unmigrated apps: messages, staticfiles
   Apply all migrations: admin, asistencias, auth, clientes, contenttypes, entrenadores, evaluaciones, membresias, pagos, sessions
@@ -51,7 +51,11 @@ Running migrations:
   Applying membresias.0002_alter_membresia_motivo_cancelacion_and_more... OK
   Applying pagos.0001_initial... OK
   Applying pagos.0002_alter_pago_referencia_operacion... OK
-  Applying sessions.0001_initial...test_01_inscripcion_valida_001 (clientes.tests.ClientesMasivoAPITestCase.test_01_inscripcion_valida_001) ... ok
+  Applying sessions.0001_initial...test_flujo_completo_1000_clientes_y_paradigmas (clientes.tests.ClientesIntegracionAvanzadaTestCase.test_flujo_completo_1000_clientes_y_paradigmas) ... ok
+test_json_malformado_y_tipo_incorrecto_retorna_400 (clientes.tests.ClientesIntegracionAvanzadaTestCase.test_json_malformado_y_tipo_incorrecto_retorna_400) ... ok
+test_orden_inscripciones_bd_vacia (clientes.tests.ClientesIntegracionAvanzadaTestCase.test_orden_inscripciones_bd_vacia) ... ok
+test_vista_auditoria_y_redireccion_raiz (clientes.tests.ClientesIntegracionAvanzadaTestCase.test_vista_auditoria_y_redireccion_raiz) ... ok
+test_01_inscripcion_valida_001 (clientes.tests.ClientesMasivoAPITestCase.test_01_inscripcion_valida_001) ... ok
 test_01_inscripcion_valida_002 (clientes.tests.ClientesMasivoAPITestCase.test_01_inscripcion_valida_002) ... ok
 test_01_inscripcion_valida_003 (clientes.tests.ClientesMasivoAPITestCase.test_01_inscripcion_valida_003) ... ok
 test_01_inscripcion_valida_004 (clientes.tests.ClientesMasivoAPITestCase.test_01_inscripcion_valida_004) ... ok
@@ -1101,9 +1105,10 @@ test_05_recursividad_escala_147_1470_registros (paradigmas.pruebas.test_paradigm
 test_05_recursividad_escala_148_1480_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_148_1480_registros) ... ok
 test_05_recursividad_escala_149_1490_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_149_1490_registros) ... ok
 test_05_recursividad_escala_150_1500_registros (paradigmas.pruebas.test_paradigmas.ParadigmasMasivoTestCase.test_05_recursividad_escala_150_1500_registros) ... ok
+test_orm_orquestador_y_recursividad (paradigmas.pruebas.test_paradigmas.ParadigmasORMIntegracionTestCase.test_orm_orquestador_y_recursividad) ... ok
 
 ----------------------------------------------------------------------
-Ran 1050 tests in 1.843s
+Ran 1055 tests in 3.216s
 
 OK
 Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

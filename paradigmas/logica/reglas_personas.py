@@ -48,7 +48,7 @@ def contar_clientes_activos_recursivo(lista_clientes, indice=0):
         sys.setrecursionlimit(len(lista_clientes) + 500)
 
     # Caso Base: Fin de la lista (condición de parada de la recursión)
-    if indice == len(lista_clientes):
+    if indice >= len(lista_clientes):
         return 0
     
     # Caso Recursivo: Evaluamos mediante la regla lógica y avanzamos el índice

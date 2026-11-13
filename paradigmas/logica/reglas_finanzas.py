@@ -45,7 +45,7 @@ def contar_pagos_completados_recursivo(lista_pagos, indice=0):
         sys.setrecursionlimit(len(lista_pagos) + 500)
 
     # Caso Base: Fin de la iteración
-    if indice == len(lista_pagos):
+    if indice >= len(lista_pagos):
         return 0
     
     # Caso Recursivo

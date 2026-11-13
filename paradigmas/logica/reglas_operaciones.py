@@ -43,7 +43,7 @@ def contar_asistencias_efectivas_recursivo(lista_asistencias, indice=0):
         sys.setrecursionlimit(len(lista_asistencias) + 500)
 
     # Caso Base
-    if indice == len(lista_asistencias):
+    if indice >= len(lista_asistencias):
         return 0
     
     # Caso Recursivo

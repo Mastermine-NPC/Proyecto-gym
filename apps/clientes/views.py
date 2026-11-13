@@ -19,7 +19,18 @@ def inscribir_cliente(request):
     try:
         # Permite recibir tanto JSON como form-data
         if request.content_type == "application/json" and request.body:
-            data = json.loads(request.body.decode("utf-8"))
+            try:
+                data = json.loads(request.body.decode("utf-8"))
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                return JsonResponse(
+                    {"error": "El cuerpo de la petición no contiene un JSON válido."},
+                    status=400,
+                )
+            if not isinstance(data, dict):
+                return JsonResponse(
+                    {"error": "El JSON enviado debe ser un objeto clave-valor."},
+                    status=400,
+                )
         else:
             data = request.POST.dict()
 
@@ -177,9 +188,14 @@ def api_orden_inscripciones(request):
     if total == 0:
         return JsonResponse({
             "total": 0,
+            "total_inscritos": 0,
             "primero": None,
             "ultimo": None,
             "duracion_segundos": 0,
+            "duracion_total_segundos": 0,
+            "tasa_insercion_rps": 0,
+            "direccion_orden": direccion_orden,
+            "limite_mostrado": 0,
             "clientes": []
         })
 

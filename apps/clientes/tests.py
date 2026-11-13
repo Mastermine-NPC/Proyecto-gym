@@ -277,3 +277,103 @@ for _i in range(1, 51):
         f"test_04_estadisticas_y_orden_{_i:03d}",
         _make_orden_query_test(_i),
     )
+
+
+class ClientesIntegracionAvanzadaTestCase(TestCase):
+    """
+    Pruebas de integración de extremo a extremo para el flujo de auditoría,
+    validaciones HTTP y carga real de 1,000 clientes inscritos en BD.
+    """
+
+    def setUp(self):
+        self.client = Client()
+        self.url_inscribir = reverse("clientes:inscribir_cliente")
+        self.url_estadisticas = reverse("clientes:estadisticas_clientes")
+        self.url_orden = reverse("clientes:api_orden_inscripciones")
+        self.url_auditoria = reverse("auditoria")
+
+    def test_vista_auditoria_y_redireccion_raiz(self):
+        res_root = self.client.get("/")
+        self.assertEqual(res_root.status_code, 302)
+        self.assertIn("/auditoria/", res_root["Location"])
+
+        res_aud = self.client.get(self.url_auditoria)
+        self.assertEqual(res_aud.status_code, 200)
+        self.assertIn("AuraFit Gym", res_aud.content.decode("utf-8"))
+
+    def test_orden_inscripciones_bd_vacia(self):
+        res = self.client.get(self.url_orden)
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertEqual(data["total_inscritos"], 0)
+        self.assertEqual(data["duracion_total_segundos"], 0)
+        self.assertEqual(data["tasa_insercion_rps"], 0)
+        self.assertEqual(data["clientes"], [])
+
+    def test_json_malformado_y_tipo_incorrecto_retorna_400(self):
+        res_bad_json = self.client.post(
+            self.url_inscribir,
+            data="{json_invalido",
+            content_type="application/json",
+        )
+        self.assertEqual(res_bad_json.status_code, 400)
+
+        res_list_json = self.client.post(
+            self.url_inscribir,
+            data=json.dumps(["no", "es", "dict"]),
+            content_type="application/json",
+        )
+        self.assertEqual(res_list_json.status_code, 400)
+
+    def test_flujo_completo_1000_clientes_y_paradigmas(self):
+        from paradigmas.orquestador import OrquestadorAuraFit
+        from paradigmas.logica.reglas_personas import contar_clientes_activos_recursivo
+
+        for idx in range(1, 1001):
+            payload = {
+                "nombres": f"Atleta{idx}",
+                "apellido_paterno": f"Gimnasio{idx}",
+                "apellido_materno": "AuraFit",
+                "dni": f"{80000000 + idx:08d}",
+                "telefono": f"9{10000000 + idx:08d}",
+                "correo": f"atleta_{idx}@aurafit.pe",
+                "fecha_nacimiento": "1996-06-15",
+                "sexo": "M" if idx % 2 == 0 else "F",
+                "direccion": f"Av. Deporte {idx}",
+                "incluir_membresia": (idx % 5 == 0),
+            }
+            res = self.client.post(
+                self.url_inscribir,
+                data=json.dumps(payload),
+                content_type="application/json",
+            )
+            self.assertEqual(res.status_code, 201)
+
+        res_stats = self.client.get(self.url_estadisticas)
+        self.assertEqual(res_stats.status_code, 200)
+        stats = res_stats.json()
+        self.assertEqual(stats["total_clientes_en_bd"], 1000)
+        self.assertEqual(stats["clientes_activos"], 1000)
+        self.assertEqual(stats["total_membresias_activas"], 200)
+
+        res_orden = self.client.get(f"{self.url_orden}?limite=1000&orden=asc")
+        self.assertEqual(res_orden.status_code, 200)
+        orden_data = res_orden.json()
+        self.assertEqual(orden_data["total_inscritos"], 1000)
+        self.assertEqual(orden_data["limite_mostrado"], 1000)
+        self.assertEqual(orden_data["primero"]["dni"], "80000001")
+        self.assertEqual(orden_data["ultimo"]["dni"], "80001000")
+
+        clientes_bd = list(Cliente.objects.all())
+        self.assertEqual(contar_clientes_activos_recursivo(clientes_bd), 1000)
+        reporte = OrquestadorAuraFit(
+            clientes_bd, [], [], [], list(Membresia.objects.all()), []
+        ).generar_reporte_integral()
+        self.assertEqual(
+            reporte["GIMNASIO_AURAFIT"]["MODULO_PERSONAS"]["total_clientes_filtrados"],
+            1000,
+        )
+        self.assertEqual(
+            reporte["GIMNASIO_AURAFIT"]["MODULO_FINANCIERO"]["total_membresias_vigentes"],
+            200,
+        )
